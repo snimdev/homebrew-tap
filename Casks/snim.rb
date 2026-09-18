@@ -1,6 +1,6 @@
 cask "snim" do
-  version "1.0.0-alpha.2"
-  sha256 "43888318068fd5408319e35c18d99c1f3b0c70f54222cf6d49acc5a69987b94e"
+  version "1.0.0-alpha.3"
+  sha256 "838c2de40b5d6ad3d765222f51121e68d5e72c5b2bf7e328859cc1c50ef1e4fc"
 
   url "https://github.com/snimdev/snim/releases/download/v#{version}/Snim-#{version}-macos-arm64.dmg",
       verified: "github.com/snimdev/snim/"
@@ -20,9 +20,10 @@ cask "snim" do
     end
   end
 
-  # Only an arm64 DMG is built, against the Homebrew Qt of a Sonoma runner.
+  # Only an arm64 DMG is built, and macdeployqt bundles the Homebrew Qt of the macOS 15
+  # runner it was built on, so Sequoia is the floor.
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: ">= :sequoia"
 
   app "Snim.app"
 
