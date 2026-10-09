@@ -1,6 +1,6 @@
 cask "snim" do
-  version "1.0.0-rc.1"
-  sha256 "175399d9796b83de1fac6ecbf48a8cc229b63ecdf1b2ad4c4c48270328910d4c"
+  version "1.0.0-rc.2"
+  sha256 "656286c559bc10fe78be7dfb0d19d22034f7363026fe9c2a51ea564aa8a2d0f1"
 
   url "https://github.com/snimdev/snim/releases/download/v#{version}/Snim-#{version}-macos-arm64.dmg",
       verified: "github.com/snimdev/snim/"
