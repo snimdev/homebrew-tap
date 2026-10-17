@@ -8,16 +8,9 @@ cask "snim" do
   desc "Screenshot, screen recording, OCR and upload tool"
   homepage "https://snim.dev/"
 
-  # The releases are prereleases, which the default GitHub strategy skips.
   livecheck do
     url :url
-    strategy :github_releases do |json|
-      json.map do |release|
-        next if release["draft"]
-
-        release["tag_name"]&.delete_prefix("v")
-      end
-    end
+    strategy :github_latest
   end
 
   # Only an arm64 DMG is built, and macdeployqt bundles the Homebrew Qt of the macOS 15
