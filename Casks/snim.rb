@@ -2,8 +2,7 @@ cask "snim" do
   version "1.0.0"
   sha256 "6979fa11e4dfb184e28866d7ce8b4ab662647337f46ea48fb8a06b824e752903"
 
-  url "https://github.com/snimdev/snim/releases/download/v#{version}/Snim-#{version}-macos-arm64.dmg",
-      verified: "github.com/snimdev/snim/"
+  url "https://github.com/snimdev/snim/releases/download/v#{version}/Snim-#{version}-macos-arm64.dmg"
   name "Snim"
   desc "Screenshot, screen recording, OCR and upload tool"
   homepage "https://snim.dev/"
@@ -16,7 +15,7 @@ cask "snim" do
   # Only an arm64 DMG is built, and macdeployqt bundles the Homebrew Qt of the macOS 15
   # runner it was built on, so Sequoia is the floor.
   depends_on arch: :arm64
-  depends_on macos: ">= :sequoia"
+  depends_on macos: :sequoia
 
   app "Snim.app"
 
