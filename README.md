@@ -15,14 +15,13 @@ Apple silicon only for now: the release workflow builds a single arm64 DMG.
 The DMG is signed with a Developer ID and notarized by Apple, so Snim opens without a
 Gatekeeper warning. On first capture macOS asks for Screen Recording permission.
 
-## Alpha releases
+## Releases
 
-The cask tracks the alpha channel, so `version` carries a prerelease suffix and
-`brew upgrade` follows it. Bump it after a release with the checksum GitHub already
-publishes:
+The cask follows stable releases, and `livecheck` watches the latest GitHub release.
+Bump it after a release with the checksum GitHub already publishes:
 
 ```sh
-gh release download v1.0.0-alpha.3 --repo snimdev/snim --pattern sha256sums.txt --output -
+gh release download v1.0.1 --repo snimdev/snim --pattern sha256sums.txt --output -
 ```
 
 Then edit `version` and `sha256` in `Casks/snim.rb`.
