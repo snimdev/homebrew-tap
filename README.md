@@ -10,12 +10,10 @@ brew install --cask snim
 
 Apple silicon only for now: the release workflow builds a single arm64 DMG.
 
-## The builds are unsigned
+## Signed and notarized
 
-Snim has no Developer ID signature or notarization yet, so the first launch shows
-"Snim cannot be opened because the developer cannot be verified". Open it once from
-Finder with right click, Open, and macOS remembers the choice. Signing lands before
-1.0, and the cask needs no change when it does.
+The DMG is signed with a Developer ID and notarized by Apple, so Snim opens without a
+Gatekeeper warning. On first capture macOS asks for Screen Recording permission.
 
 ## Alpha releases
 
