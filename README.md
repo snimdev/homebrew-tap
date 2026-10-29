@@ -26,10 +26,6 @@ gh release download v1.0.1 --repo snimdev/snim --pattern sha256sums.txt --output
 
 Then edit `version` and `sha256` in `Casks/snim.rb`.
 
-Until github.com/snimdev/snim is public, the DMG is not downloadable without
-credentials, so `brew install` fails for anyone but the maintainers. That is also why
-this tap is private: it goes public with the app repo.
-
 ## Uninstalling
 
 `brew uninstall --zap --cask snim` removes the app and its preferences. Upload
