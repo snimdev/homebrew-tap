@@ -18,7 +18,9 @@ Gatekeeper warning. On first capture macOS asks for Screen Recording permission.
 ## Releases
 
 The cask follows stable releases, and `livecheck` watches the latest GitHub release.
-Bump it after a release with the checksum GitHub already publishes:
+After every stable release, the app's release workflow sets `version` and `sha256` in
+`Casks/snim.rb` and commits it as `snim-bot`. To bump it by hand instead, take the
+checksum GitHub already publishes:
 
 ```sh
 gh release download v1.0.1 --repo snimdev/snim --pattern sha256sums.txt --output -
